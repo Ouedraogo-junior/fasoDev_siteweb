@@ -1,0 +1,115 @@
+import type { Project } from '../types'
+
+export const projects: Project[] = [
+    {
+    slug: 'riadel',
+    title: 'Riadel',
+    category: 'applications-mobiles',
+    categoryLabel: 'Application mobile & web',
+    shortDescription: "Plateforme communautaire d'entraide avec chat en temps réel et abonnement premium.",
+    description:
+      "Riadel connecte ses membres autour de demandes d'aide et d'échanges communautaires, avec messagerie instantanée, notifications en temps réel et un système d'affiliation premium. La version web est en production ; l'application mobile est actuellement en cours de développement.",
+    stack: ['Laravel 12', 'Next.js', 'React Native (Expo)', 'Reverb (WebSocket)'],
+    status: 'Web en production · Mobile en développement',
+    demoUrl: 'https://app.riadel-bf.com',
+    image: '/images/projets/riadel.jpg',
+  },
+  {
+    slug: 'faso-solution',
+    title: 'Faso Solution',
+    category: 'sites-web',
+    categoryLabel: 'Site e-commerce',
+    shortDescription: 'E-commerce accessible aux personnes non-alphabétisées, commande via WhatsApp.',
+    description:
+      "Faso Solution permet de commander par WhatsApp et de payer par Mobile Money, avec une interface pensée pour rester accessible aux utilisateurs non-alphabétisés.",
+    stack: ['React', 'Laravel', 'WhatsApp Business API', 'Mobile Money'],
+    status: 'En développement',
+    image: '/images/projets/faso-solutions.PNG',
+  },
+  {
+    slug: 'ecole-primaire',
+    title: "Gestion d'école primaire",
+    category: 'logiciels-de-gestion',
+    categoryLabel: 'Logiciel de gestion d\'une école ',
+    shortDescription: 'Notes, bulletins, paiements et emploi du temps pour un établissement scolaire.',
+    description:
+      "Un logiciel complet pour la gestion administrative et pédagogique d'une école primaire : notes, bulletins, paiements avec reçus thermiques, examens nationaux CM2 et emploi du temps.",
+    stack: ['Laravel 12', 'React', 'Vite', 'TypeScript', 'Tailwind CSS'],
+    status: 'MVP livré',
+    demoUrl: 'https://app.fasodev.com',
+  },
+  {
+    slug: 'mila-ice-cream',
+    title: 'Mila Ice Cream',
+    category: 'logiciels-de-gestion',
+    categoryLabel: 'Logiciel de gestion',
+    shortDescription: 'Gestion de vente pour un glacier, avec interfaces caissier et administrateur.',
+    description:
+      "Mila Ice Cream digitalise la vente d'un glacier avec deux interfaces distinctes : une pour les caissiers au quotidien, une pour l'administrateur qui supervise stocks et ventes.",
+    stack: ['Laravel', 'Tailwind CSS', 'Blade'],
+    status: 'En production',
+    demoUrl: 'https://millaicecream.com',
+  },
+  {
+    slug: 'gestion-salon-coiffure',
+    title: 'Gestion de salon de coiffure',
+    category: 'logiciels-de-gestion',
+    categoryLabel: 'Logiciel de gestion',
+    shortDescription: "Logiciel de gestion pensé pour l'activité quotidienne d'un salon de coiffure.",
+    description:
+      "Un logiciel de gestion sur mesure pour un salon de coiffure, développé pour simplifier le suivi de l'activité au quotidien.",
+    stack: ['React', 'Laravel'],
+    status: 'Version de test',
+    demoUrl: 'https://app.millaicecream.com',
+  },
+  {
+    slug: 'hamed-telecom',
+    title: 'Hamed Telecom',
+    category: 'logiciels-de-gestion',
+    categoryLabel: 'Logiciel de gestion',
+    shortDescription: 'Logiciel de gestion de vente pour une entreprise de télécommunications.',
+    description:
+      "Un logiciel de gestion de vente sur mesure, conçu pour suivre les transactions et l'activité commerciale de l'entreprise.",
+    stack: ['React', 'Laravel'],
+    status: 'Version de test',
+    demoUrl: 'https://hamedtelecom.millaicecream.com',
+    image: '/images/projets/hamed.png',
+  },
+  {
+    slug: 'zenbet',
+    title: 'Zenbet',
+    category: 'sites-web',
+    categoryLabel: 'Site web',
+    shortDescription: "Site de paris sportifs, publication d'informations sur les matchs et espace d'investissement.",
+    description:
+      "Zenbet publie des informations sur les matchs et les paris sportifs, avec un espace permettant aux utilisateurs d'investir sur la plateforme.",
+    stack: ['Laravel', 'Livewire', 'Blade'],
+    status: 'En production',
+    demoUrl: 'https://zzenbet.com',
+    image: '/images/projets/zenbet.jpeg',
+  },
+  {
+    slug: 'glozi',
+    title: 'GLOZI',
+    category: 'applications-mobiles',
+    categoryLabel: 'Application mobile',
+    shortDescription: 'Application mobile actuellement en cours de développement.',
+    description: 'GLOZI est une application mobile en cours de développement.',
+    stack: ['React Native', 'Laravel', 'Expo', 'React'],
+    status: 'En développement',
+  },
+
+  {
+    slug: 'sogecop',
+    title: 'SOGECOP',
+    category: 'sites-web',
+    categoryLabel: 'Site web & logiciel',
+    shortDescription: "Site vitrine et logiciel de gestion interne pour le suivi des commandes de l'entreprise.",
+    description:
+      "Pour SOGECOP SARL, développement d'un site web de présentation de l'entreprise ainsi que d'un logiciel de gestion interne dédié au suivi des commandes, tous deux réalisés avec Laravel et React.",
+    stack: ['Laravel', 'React'],
+    status: 'En production',
+    demoUrl: 'https://sogecop.com',
+    image: '/images/projets/sogecop.jpeg',
+  },
+]

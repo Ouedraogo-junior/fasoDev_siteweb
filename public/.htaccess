@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Ne rien réécrire si le fichier ou dossier demandé existe réellement
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Sinon, fallback vers le shell SPA
+RewriteRule ^ /index.html [L]

@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------
+   FasoDev — Design tokens (source : CDC §5.1, palette extraite du logo)
+   @theme expose ces couleurs comme utilitaires Tailwind :
+   bg-primary-emerald, text-primary-navy, border-accent-gold, etc.
+--------------------------------------------------------- */
+@theme {
+  --color-primary-emerald: #2E8B3D;   /* vert primaire — texte "Faso", liens, éléments actifs */
+  --color-primary-lime: #69A618;      /* vert accent — hover, badges */
+  --color-primary-teal: #1D85B6;      /* bleu secondaire — dégradés, graphiques */
+  --color-primary-navy: #145B92;      /* bleu primaire foncé — header, boutons principaux */
+  --color-primary-navy-deep: #0B3B54; /* navy profond — fond dark, footer */
+  --color-accent-gold: #DAAE21;       /* or — CTA uniquement, cf. logique de l'affiche */
+  --color-surface-light: #FFFFFF;
+  --color-surface-muted: #F5F7F8;
+  --color-ink: #1F2937;
+
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  /* Layout — réutilisés dans tout le site */
+  --spacing-gutter: 24px;      /* padding horizontal standard */
+  --container-page: 1280px;    /* largeur max du contenu → génère max-w-page */
+
+  --text-display-sm: 32px;
+  --text-display-sm--line-height: 1.2;
+  --text-display-sm--letter-spacing: -0.01em;
+
+  --text-display: 48px;
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: -0.02em;
+
+  --text-h1: 36px;
+  --text-h1--line-height: 1.2;
+  --text-h1--letter-spacing: -0.01em;
+
+  --text-h2: 28px;
+  --text-h2--line-height: 1.25;
+  --text-h2--letter-spacing: -0.01em;
+
+  --text-h3: 20px;
+  --text-h3--line-height: 1.3;
+
+  --text-lead: 18px;
+  --text-lead--line-height: 1.6;
+
+  --shadow-brand: 0 4px 20px rgba(20, 91, 146, 0.08);
+  --shadow-brand-lg: 0 8px 30px rgba(20, 91, 146, 0.12);
+
+}
+
+:root {
+  /* Variables sémantiques — utilisées directement dans le CSS custom (var(--text), var(--bg)...)
+     tandis que @theme ci-dessus sert aux classes utilitaires Tailwind dans le JSX */
+  --text: #4B5563;
+  --text-h: var(--color-ink);
+  --bg: var(--color-surface-light);
+  --bg-muted: var(--color-surface-muted);
+  --border: #E5E7EB;
+
+  --accent: var(--color-accent-gold);
+  --accent-bg: rgba(218, 174, 33, 0.1);
+  --accent-border: rgba(218, 174, 33, 0.5);
+
+  --link: var(--color-primary-navy);
+  --link-hover: var(--color-primary-emerald);
+
+  --shadow:
+    rgba(11, 59, 84, 0.1) 0 10px 15px -3px,
+    rgba(11, 59, 84, 0.05) 0 4px 6px -2px;
+
+  color-scheme: light;
+}
