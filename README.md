@@ -1,75 +1,63 @@
-# React + TypeScript + Vite
+# FasoDev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site web vitrine de FasoDev — services de développement web, logiciels de gestion et applications mobiles au Burkina Faso.
 
-Currently, two official plugins are available:
+🔗 [fasodev.com](https://fasodev.com) <!-- à adapter si le domaine diffère -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Fonctionnalités
 
-## React Compiler
+- Présentation des services : sites web, logiciels de gestion, applications mobiles, maintenance & support informatique
+- Portfolio de réalisations avec fiches détaillées par projet (stack technique, lien de démo)
+- Fil d'Ariane visuel et données structurées (JSON-LD) pour le référencement
+- Formulaire de contact avec présélection du service concerné
+- SEO par page (titres, descriptions, métadonnées)
+- Interface responsive, du mobile au desktop
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack technique
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — build tool
+- [React Router](https://reactrouter.com/) — routing
+- [Tailwind CSS](https://tailwindcss.com/) — styles
+- [Lucide React](https://lucide.dev/) — icônes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/<votre-compte>/<votre-repo>.git
+cd <votre-repo>
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📜 Scripts disponibles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev        # Lance le serveur de développement
+npm run build       # Build de production
+npm run preview     # Prévisualise le build de production
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Structure du projet
 
 ```
+src/
+├── components/
+│   ├── layout/        # Header, Footer, Container, PageHeader, Breadcrumb...
+│   └── sections/       # Hero, ServicesOverview, ContactCTA, ServiceCard...
+├── data/
+│   ├── services.ts     # Contenu des services proposés
+│   └── projects.ts     # Contenu du portfolio de réalisations
+├── pages/               # Accueil, Services, ServiceDetail, Réalisations, ProjectDetail, Contact, À propos
+├── types.ts             # Types partagés (Service, Project)
+└── main.tsx
+```
+
+## ✏️ Modifier le contenu
+
+- **Services** : éditer `src/data/services.ts`
+- **Réalisations** : éditer `src/data/projects.ts`
+- **Images de projets** : à placer dans `public/images/projects/`, puis renseigner le champ `image` de l'entrée correspondante
+
+## 📄 Licence
+
+Tous droits réservés — FasoDev.
